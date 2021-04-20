@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>MacBook Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="apple_logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="computer.png" class="computer">
+            <div id="circle">
+                
+                <div class="feature one">
+                    <img src="camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>1080p HD Camera for Videocalls</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="processor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>M1 Processor with 16-core</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="battery.png">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5152mAh, 20 Hour Battery Life</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>Incredible level of detail and realism</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <img src="arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="arrow.png" id="downBtn">
+        </div>
+
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        var is_true = 1
+        function rotate()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        
+    </script>
+</body>
+</html>
